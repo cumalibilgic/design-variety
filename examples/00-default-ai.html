@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- WITHOUT the skill: the default "AI look". Same product as the other examples. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karga Coffee - default AI look</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #f9fafb; color: #111827; }
+  .hero { text-align: center; padding: 96px 24px 80px; color: #fff;
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #3b82f6 100%); }
+  .hero h1 { font-size: 56px; margin: 0 0 16px; font-weight: 800; }
+  .hero p { font-size: 20px; max-width: 620px; margin: 0 auto 32px; opacity: .9; }
+  .btn { display: inline-block; padding: 14px 28px; border-radius: 12px; font-weight: 600; margin: 0 6px; }
+  .primary { background: #fff; color: #6366f1; }
+  .secondary { border: 2px solid rgba(255,255,255,.7); color: #fff; }
+  .trusted { text-align: center; padding: 40px 24px 8px; color: #6b7280; font-size: 14px; }
+  .logos { display: flex; justify-content: center; gap: 40px; margin-top: 16px; opacity: .6; font-weight: 700; font-size: 18px; }
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1040px; margin: 48px auto; padding: 0 24px; }
+  .card { background: #fff; border-radius: 16px; padding: 28px; box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+  .card .icon { font-size: 36px; }
+  .card h3 { margin: 12px 0 8px; }
+  .card p { margin: 0; color: #6b7280; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Fresh Coffee, Delivered ☕</h1>
+    <p>Discover small-batch roasts from around the world, delivered to your door every month.</p>
+    <span class="btn primary">Get Started</span><span class="btn secondary">Learn More</span>
+  </section>
+  <div class="trusted">Trusted by thousands of coffee lovers
+    <div class="logos"><span>Acme</span><span>Globex</span><span>Initech</span><span>Umbrella</span></div></div>
+  <section class="cards">
+    <div class="card"><div class="icon">🌱</div><h3>Ethically Sourced</h3><p>We work directly with farmers to bring you the best beans.</p></div>
+    <div class="card"><div class="icon">🚚</div><h3>Fast Delivery</h3><p>Roasted to order and shipped within 48 hours of roasting.</p></div>
+    <div class="card"><div class="icon">⭐</div><h3>Flexible Plans</h3><p>Pause, skip or cancel anytime with a single click.</p></div>
+  </section>
+</body>
+</html>

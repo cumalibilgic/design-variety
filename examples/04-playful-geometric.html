@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Brief: python3 skills/design-variety/scripts/seed.py --direction playful-geometric --type landing --seed 11 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karga - playful geometric</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#FFE3EC; --text:#2B1B3D; --accent:#D61F69; --on-accent:#FFE3EC; --secondary:#00B8A9;
+    --font:"Rubik","Fira Sans",Montserrat,sans-serif; --border:3px solid var(--text); --shadow:4px 4px 0 var(--text); --radius:20px; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:var(--font); line-height:1.55; overflow-x:hidden; }
+  ::selection { background:var(--accent); color:var(--on-accent); }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; }
+  .logo { font-weight:700; font-size:1.6rem; display:flex; align-items:center; gap:10px; }
+  .logo i { width:34px; height:34px; border-radius:50%; background:var(--accent); border:var(--border); display:inline-block; }
+  .pill { border:var(--border); border-radius:999px; padding:.5em 1.2em; font-weight:700; background:#fff; box-shadow:var(--shadow); }
+  .hero { padding:40px 40px 90px; display:grid; grid-template-columns:1.2fr .8fr; gap:32px; align-items:center; max-width:1200px; margin:0 auto; position:relative; }
+  h1 { font-size:clamp(3rem, 1.5rem + 6vw, 6.4rem); line-height:1.12; margin:0 0 24px; font-weight:700; }
+  h1 .sq { position:relative; display:inline-block; color:var(--accent); }
+  h1 .sq svg { position:absolute; left:0; bottom:-14px; width:100%; height:18px; }
+  .hero p { font-size:1.2rem; max-width:40ch; }
+  .btn { font:inherit; font-weight:700; font-size:1.1rem; background:var(--accent); color:var(--on-accent); border:var(--border); border-radius:var(--radius);
+         box-shadow:var(--shadow); padding:.8em 1.6em; cursor:pointer; transition:transform .3s cubic-bezier(.34,1.56,.64,1); }
+  .btn:hover { transform:translate(-2px,-2px) rotate(-2deg); } .btn:active { transform:translate(4px,4px); box-shadow:none; }
+  .btn:focus-visible { outline:3px solid var(--text); outline-offset:3px; }
+  .art { position:relative; height:420px; }
+  .blob { position:absolute; border:var(--border); }
+  .b1 { width:300px; height:300px; border-radius:50%; background:var(--secondary); right:10px; top:10px; }
+  .b2 { width:200px; height:200px; border-radius:30px; background:#FFC93C; left:20px; bottom:20px; transform:rotate(12deg); }
+  .b3 { width:130px; height:130px; background:var(--text); border-radius:50% 50% 0 50%; right:30px; bottom:10px; }
+  .cup { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); font-size:0; }
+  .sticker { position:absolute; top:-6px; left:-6px; width:120px; height:120px; border-radius:50%; background:var(--accent); color:var(--on-accent); border:var(--border);
+             display:grid; place-items:center; text-align:center; font-weight:700; line-height:1.05; transform:rotate(-14deg); box-shadow:var(--shadow); }
+  .band { padding:64px 40px; border-top:var(--border); }
+  .band.y { background:#FFC93C; } .band.t { background:var(--secondary); }
+  .inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+  .card { background:#fff; border:var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; }
+  .card:nth-child(1){ transform:rotate(-2deg);} .card:nth-child(2){ transform:rotate(1.5deg) translateY(10px);} .card:nth-child(3){ transform:rotate(-1deg);}
+  .card h3 { margin:0 0 8px; font-size:1.5rem; } .card p { margin:0; }
+  .dot { width:46px; height:46px; border-radius:50%; border:var(--border); margin-bottom:14px; }
+  .band.t h2 { font-size:2.4rem; margin:0 0 10px; color:var(--on-accent); color:#fff; text-shadow:2px 2px 0 var(--text); }
+  @media (max-width:860px){ .hero,.inner{grid-template-columns:1fr} .art{height:300px} }
+  @media (prefers-reduced-motion:reduce){ .btn{transition:none} }
+</style>
+</head>
+<body>
+  <nav><div class="logo"><i></i>karga</div><div class="pill">Log in</div></nav>
+  <section class="hero">
+    <div>
+      <h1>Beans that <span class="sq">bring joy
+        <svg viewBox="0 0 200 18" preserveAspectRatio="none"><path d="M2 10 Q 14 0 26 10 T 50 10 T 74 10 T 98 10 T 122 10 T 146 10 T 170 10 T 198 10" fill="none" stroke="#2B1B3D" stroke-width="4" stroke-linecap="round"/></svg></span>
+        to Mondays.</h1>
+      <p>Fresh-roasted coffee in a box that's actually fun to open. Pick your roast, pick your pace, pause whenever.</p>
+      <button class="btn">Build my box!</button>
+    </div>
+    <div class="art"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="sticker">free<br>first<br>bag!</div></div>
+  </section>
+  <section class="band y"><div class="inner">
+    <div class="card"><div class="dot" style="background:var(--accent)"></div><h3>Roasted this week</h3><p>Not last month. Not "best by" next spring.</p></div>
+    <div class="card"><div class="dot" style="background:var(--secondary)"></div><h3>Zero guilt skips</h3><p>Overstocked? Skip a month with one tap.</p></div>
+    <div class="card"><div class="dot" style="background:#FFC93C"></div><h3>Fair to farmers</h3><p>We pay 2x market price, and show you the receipts.</p></div>
+  </div></section>
+  <section class="band t"><div class="inner" style="grid-template-columns:1fr"><h2>Over 12,000 happy mugs and counting.</h2></div></section>
+</body>
+</html>

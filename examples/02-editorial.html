@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Brief: python3 skills/design-variety/scripts/seed.py --direction editorial --type landing --seed 11 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karga - editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#121212; --text:#EDE8DC; --accent:#E8B04B; --on-accent:#121212; --secondary:#6F6A5E;
+    --font-display:"DM Serif Display","Cardo","Gelasio",Georgia,serif; --font-body:"DM Sans",Inter,sans-serif;
+    --rule:1px solid var(--text); }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:var(--font-body); line-height:1.65; font-size:1.0625rem; }
+  ::selection { background:var(--accent); color:var(--on-accent); }
+  .wrap { max-width:1200px; margin:0 auto; padding:0 32px; }
+  .dateline { display:flex; justify-content:space-between; border-bottom:var(--rule); padding:12px 0; font-size:.78rem;
+              text-transform:uppercase; letter-spacing:.14em; }
+  .dateline b { color:var(--accent); font-weight:700; }
+  header.mast { text-align:left; padding:56px 0 24px; display:grid; grid-template-columns:repeat(12,1fr); gap:24px; border-bottom:var(--rule); }
+  .kicker { grid-column:1 / span 3; font-size:.78rem; text-transform:uppercase; letter-spacing:.16em; color:var(--accent); padding-top:.9rem; }
+  h1 { grid-column:4 / span 9; font-family:var(--font-display); font-weight:400; letter-spacing:-.02em; line-height:1.0;
+       font-size:clamp(3rem, 1.4rem + 7.4vw, 8.2rem); margin:0; }
+  h1 i { color:var(--accent); }
+  .deck { grid-column:4 / span 6; font-size:1.3rem; line-height:1.5; margin:16px 0 0; color:#cfc9bb; }
+  .grid { display:grid; grid-template-columns:repeat(12,1fr); gap:24px; padding:48px 0; }
+  .col-a { grid-column:1 / span 3; font-size:.9rem; border-top:var(--rule); padding-top:14px; }
+  .col-b { grid-column:4 / span 5; columns:2; column-gap:32px; column-rule:1px solid #3a3a3a; text-align:left; hyphens:auto; }
+  .col-b p { margin:0 0 1em; }
+  .col-b p:first-child::first-letter { font-family:var(--font-display); float:left; font-size:4.6rem; line-height:.8; padding:.35rem .5rem 0 0; color:var(--accent); }
+  .pull { grid-column:9 / span 4; font-family:var(--font-display); font-size:2.1rem; line-height:1.15; border-top:3px solid var(--accent); padding-top:16px; margin:0; }
+  .pull small { display:block; font-family:var(--font-body); font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; margin-top:14px; color:var(--secondary); color:#9c9686; }
+  .plans { border-top:var(--rule); display:grid; grid-template-columns:repeat(3,1fr); }
+  .plan { padding:24px 24px 32px 0; border-right:1px solid #3a3a3a; }
+  .plan + .plan { padding-left:24px; } .plan:last-child { border-right:0; }
+  .plan .n { font-family:var(--font-display); font-size:3rem; color:var(--accent); line-height:1; }
+  .plan h3 { font-family:var(--font-display); font-weight:400; font-size:1.6rem; margin:.4rem 0; }
+  .cta { display:inline-block; margin:40px 0 64px; color:var(--on-accent); background:var(--accent); padding:.8em 1.6em; text-decoration:none;
+         font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:.85rem; }
+  .cta:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+  @media (max-width:860px){ .kicker,h1,.deck,.col-a,.col-b,.pull{grid-column:1 / -1} .col-b{columns:1} .plans{grid-template-columns:1fr} .plan{border-right:0;padding-left:0!important;border-bottom:1px solid #3a3a3a} }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="dateline"><span>No. 14 &mdash; Winter 2026</span><span><b>Karga</b> Coffee Quarterly</span><span>Izmir &middot; Free shipping over $30</span></div>
+  <header class="mast">
+    <div class="kicker">The Subscription</div>
+    <h1>Coffee worth<br>a <i>slow</i> morning.</h1>
+    <p class="deck">Small-batch beans, roasted on Monday and at your door by Wednesday. Three roasts a month, each with the story of the farm behind it.</p>
+  </header>
+  <section class="grid">
+    <aside class="col-a"><b>In this issue</b><br>Ethiopia, Guji &mdash; 1p<br>Colombia, Huila &mdash; 2p<br>Roast notes &mdash; 3p</aside>
+    <div class="col-b">
+      <p>Every box begins at a farm we have visited. We name the producer, the altitude, the harvest month, and what we paid. Nothing is blended to hide a weak lot, and nothing sits on a shelf longer than ten days.</p>
+      <p>The result is a cup that tastes like the place it came from: blueberry and jasmine from the Guji highlands, red apple and caramel from Huila. We write the tasting notes by hand, and we are usually arguing about them.</p>
+    </div>
+    <blockquote class="pull">&ldquo;The first coffee that made me read the bag.&rdquo;<small>Subscriber, 3 years</small></blockquote>
+  </section>
+  <section class="plans">
+    <div class="plan"><div class="n">I</div><h3>The Single</h3><p>One 12 oz bag, monthly. For the solo drinker.</p></div>
+    <div class="plan"><div class="n">II</div><h3>The Pair</h3><p>Two contrasting roasts. Our most chosen plan.</p></div>
+    <div class="plan"><div class="n">III</div><h3>The Table</h3><p>Three bags and a brewing guide, for households.</p></div>
+  </section>
+  <a class="cta" href="#">Begin your subscription</a>
+</div>
+</body>
+</html>

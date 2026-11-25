@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Brief: python3 skills/design-variety/scripts/seed.py --direction dark-luxe --type landing --seed 11 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karga Reserve - dark luxe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#14090C; --text:#F0E3D8; --accent:#C9A27A; --on-accent:#14090C; --secondary:#3A1A22;
+    --font-display:"Italiana","Cardo","Gelasio",Georgia,serif; --font-body:"Work Sans","DM Sans",Inter,sans-serif;
+    --line:1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+  * { box-sizing: border-box; }
+  body { margin:0; background:radial-gradient(1200px 600px at 70% -10%, #2a1118 0%, var(--bg) 60%); color:var(--text);
+         font-family:var(--font-body); line-height:1.75; font-weight:400; }
+  ::selection { background:var(--accent); color:var(--on-accent); }
+  .micro { font-size:.72rem; letter-spacing:.3em; text-transform:uppercase; color:var(--accent); display:block; margin-bottom:1.2rem; }
+  nav { display:flex; justify-content:space-between; align-items:center; padding:28px 64px; border-bottom:var(--line); }
+  .logo { font-family:var(--font-display); font-size:1.7rem; letter-spacing:.3em; }
+  nav a { color:var(--text); text-decoration:none; font-size:.72rem; letter-spacing:.3em; text-transform:uppercase; margin-left:40px; opacity:.8; }
+  nav a:hover { color:var(--accent); opacity:1; }
+  .hero { padding:140px 64px 120px; max-width:1100px; }
+  h1 { font-family:var(--font-display); font-weight:400; font-size:clamp(3rem, 2rem + 5vw, 7rem); line-height:1.05; letter-spacing:.02em; margin:0 0 2rem; }
+  .hero p { max-width:46ch; opacity:.8; margin:0 0 3rem; }
+  .btn { display:inline-block; border:var(--line); color:var(--accent); padding:1.1em 2.6em; text-decoration:none; font-size:.72rem;
+         letter-spacing:.3em; text-transform:uppercase; transition:background .6s ease, color .6s ease; }
+  .btn:hover { background:var(--accent); color:var(--on-accent); }
+  .btn:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+  .rule { height:1px; background:var(--accent); width:0; margin:0 64px; opacity:.5; animation:draw 1.6s .2s ease-out forwards; }
+  @keyframes draw { to { width:calc(100% - 128px); } }
+  .strip { display:flex; gap:2px; overflow-x:auto; scroll-snap-type:x mandatory; padding:80px 64px; }
+  .lot { flex:0 0 min(80vw, 420px); scroll-snap-align:start; border:var(--line); padding:40px 36px 44px; position:relative; }
+  .lot .no { font-family:var(--font-display); font-size:4rem; color:var(--accent); opacity:.5; line-height:1; }
+  .lot h3 { font-family:var(--font-display); font-weight:400; font-size:2.1rem; margin:.8rem 0 .4rem; letter-spacing:.04em; }
+  .lot p { margin:0; opacity:.75; font-size:.95rem; }
+  .lot .meta { margin-top:1.6rem; padding-top:1rem; border-top:var(--line); font-size:.72rem; letter-spacing:.25em; text-transform:uppercase; color:var(--accent); }
+  footer { padding:40px 64px 56px; border-top:var(--line); display:flex; justify-content:space-between; font-size:.72rem; letter-spacing:.3em; text-transform:uppercase; opacity:.7; }
+  @media (max-width:700px){ nav,.hero,.strip,footer{padding-left:24px;padding-right:24px} .rule{margin:0 24px} nav a{margin-left:16px} }
+  @media (prefers-reduced-motion:reduce){ .rule{animation:none;width:calc(100% - 128px)} }
+</style>
+</head>
+<body>
+  <nav><div class="logo">KARGA</div><div><a href="#">The Lots</a><a href="#">Membership</a><a href="#">Atelier</a></div></nav>
+  <section class="hero">
+    <span class="micro">Reserve Subscription</span>
+    <h1>Rare lots,<br>quietly delivered.</h1>
+    <p>Four microlots a year, roasted in editions of two hundred bags. Numbered, signed, and sent to members only.</p>
+    <a class="btn" href="#">Request membership</a>
+  </section>
+  <div class="rule"></div>
+  <section class="strip">
+    <article class="lot"><div class="no">I</div><span class="micro" style="margin-top:1.2rem">Winter &middot; Edition 01</span><h3>Gesha Natural</h3><p>Panama, Boquete. Jasmine, bergamot, a long honeyed finish.</p><div class="meta">200 bags &middot; 1,900 m</div></article>
+    <article class="lot"><div class="no">II</div><span class="micro" style="margin-top:1.2rem">Spring &middot; Edition 02</span><h3>Sidama Washed</h3><p>Ethiopia, Bensa. White peach, tea rose, bright and clean.</p><div class="meta">200 bags &middot; 2,100 m</div></article>
+    <article class="lot"><div class="no">III</div><span class="micro" style="margin-top:1.2rem">Summer &middot; Edition 03</span><h3>Pink Bourbon</h3><p>Colombia, Huila. Red berries, cacao nib, a silken body.</p><div class="meta">200 bags &middot; 1,800 m</div></article>
+  </section>
+  <footer><span>Karga Reserve</span><span>Izmir &middot; By invitation</span></footer>
+</body>
+</html>

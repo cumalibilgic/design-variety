@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- Brief: python3 skills/design-variety/scripts/seed.py --direction brutalist --type landing --seed 11 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KARGA - brutalist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#FFE600; --text:#000; --accent:#D00000; --on-accent:#FFE600;
+    --font-display:"Bricolage Grotesque","Archivo Black",Impact,sans-serif;
+    --font-body:"Space Mono","DejaVu Sans Mono",monospace;
+    --border:3px solid var(--text); --shadow:6px 6px 0 var(--text); }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family:var(--font-body); line-height:1.55; }
+  ::selection { background:var(--accent); color:var(--on-accent); }
+  .strip { border-bottom:var(--border); overflow:hidden; white-space:nowrap; background:var(--text); color:var(--bg); padding:8px 0; font-weight:700; }
+  .strip span { display:inline-block; animation: slide 22s linear infinite; padding-left:100%; }
+  @keyframes slide { to { transform: translateX(-100%); } }
+  nav { display:flex; justify-content:space-between; padding:18px 32px; border-bottom:var(--border); font-weight:700; text-transform:uppercase; }
+  nav a { color:inherit; text-decoration:none; margin-left:24px; } nav a:hover { background:var(--text); color:var(--bg); }
+  .poster { padding:40px 32px 56px; border-bottom:var(--border); }
+  .idx { font-weight:700; }
+  h1 { font-family:var(--font-display); text-transform:uppercase; font-weight:700; letter-spacing:-.02em; line-height:1.02;
+       font-size:clamp(4rem, 17vw, 17rem); margin:12px 0 28px; }
+  h1 em { font-style:normal; color:var(--accent); }
+  .row { display:flex; gap:32px; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; }
+  .row p { max-width:34ch; margin:0; }
+  .btn { font:inherit; font-family:var(--font-display); font-weight:700; text-transform:uppercase; font-size:1.3rem;
+         background:var(--accent); color:var(--on-accent); border:var(--border); box-shadow:var(--shadow); padding:.7em 1.3em;
+         cursor:pointer; transition:none; }
+  .btn:active { transform:translate(6px,6px); box-shadow:0 0 0 var(--text); }
+  .btn:focus-visible { outline:3px solid var(--text); outline-offset:4px; }
+  .grid { display:grid; grid-template-columns: 2fr 1fr 1fr; }
+  .cell { padding:28px 32px; border-right:var(--border); border-bottom:var(--border); }
+  .cell:last-child { border-right:0; }
+  .cell h2 { font-family:var(--font-display); text-transform:uppercase; font-size:2rem; line-height:.95; margin:6px 0 10px; letter-spacing:-.02em; }
+  .cell.dark { background:var(--text); color:var(--bg); } .cell.dark .idx { color:var(--accent); background:var(--bg); padding:0 6px; }
+  footer { padding:20px 32px; font-weight:700; text-transform:uppercase; display:flex; justify-content:space-between; }
+  @media (max-width:800px){ .grid{grid-template-columns:1fr} .cell{border-right:0} }
+  @media (prefers-reduced-motion:reduce){ .strip span{animation:none; padding-left:0} }
+</style>
+</head>
+<body>
+  <div class="strip"><span>FRESH ROASTED MONDAYS * NO PODS * NO NONSENSE * FRESH ROASTED MONDAYS * NO PODS * NO NONSENSE *</span></div>
+  <nav><div>Karga/Coffee</div><div><a href="#">Beans</a><a href="#">Plans</a><a href="#">Roastery</a></div></nav>
+  <section class="poster">
+    <div class="idx">[00] SMALL-BATCH COFFEE SUBSCRIPTION</div>
+    <h1>Coffee, <em>no&nbsp;fluff.</em></h1>
+    <div class="row">
+      <p>We roast on Monday. We ship on Tuesday. You drink it before it gets old. That's the whole business.</p>
+      <button class="btn">Start my box &rarr;</button>
+    </div>
+  </section>
+  <section class="grid">
+    <div class="cell"><div class="idx">[01]</div><h2>Roasted to order</h2><p>Your bag doesn't exist until you do. 48 hours from drum to doorstep, 12 oz at a time.</p></div>
+    <div class="cell dark"><div class="idx">[02]</div><h2>Pay the farmer</h2><p>Direct trade. 41% of every bag goes back to origin.</p></div>
+    <div class="cell"><div class="idx">[03]</div><h2>Quit anytime</h2><p>One button. No call. No guilt trip.</p></div>
+  </section>
+  <footer><span>Karga Coffee Roasters</span><span>Est. 2019 / Izmir</span></footer>
+</body>
+</html>
